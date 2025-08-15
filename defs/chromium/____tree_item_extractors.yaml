@@ -1,13 +1,10 @@
 - item-types:
     - browser-target
   fields:
-    namex:
-      path: $.[0].Name
-    state:
-      path: "$.[0].State.Status"
-      map:
-        "running": started
-        "exited": stopped
+    type:
+      path: "$.result.targetInfo.type"
+    url:
+      path: "$.result.targetInfo.url"
 - item-types:
     - browser-process
   fields:

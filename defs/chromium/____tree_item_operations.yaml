@@ -49,7 +49,7 @@
 #
 - type: terminal
   item-types:
-    - browser-process
+    - browser-process-xx
   name: Create container from this image
   cmd: docker run -it ${id} 
   terminal: c${id}
@@ -68,7 +68,7 @@
 #
 - type: pull
   item-types:
-    - browser-process
+    - browser-process-xx
   name: Pull newers version of the image from the repository
   behavior: interactive
   cmd: docker image pull ${repo_tag}
@@ -79,7 +79,7 @@
 #
 - type: push
   item-types:
-    - browser-process
+    - browser-process-xx
   name: Push image to the repository
   behavior: interactive
   cmd: docker image push ${repo_tag}
@@ -90,7 +90,7 @@
 #
 - type: save
   item-types:
-    - browser-process
+    - browser-process-xx
   name: Save to tar file
   behavior: interactive
   cmd: docker image save ${id} --output ${id}.tar
@@ -101,7 +101,7 @@
 #
 - type: delete
   item-types:
-    - browser-process
+    - browser-process-xx
   name: Delete
   cmd: docker image remove ${id}
   refresh: parent
@@ -122,7 +122,7 @@
 #
 - type: terminal
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Attach to terminal
   cmd: docker attach ${id}
   terminal: c${namex}
@@ -135,7 +135,7 @@
 #
 - type: run
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Execute Command in Container
   # cmd: abc
   template:
@@ -149,7 +149,7 @@
 #
 - type: commit
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Create a new image from a container's changes
   cmd: docker commit ${id}
   template:
@@ -163,7 +163,7 @@
 #
 - type: save
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Export to tar file
   behavior: interactive
   cmd: docker container export ${id} --output ${id}.tar
@@ -174,7 +174,7 @@
 #
 - type: start
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Start
   cmd: docker container start ${id}
   refresh: self
@@ -187,7 +187,7 @@
 #
 - type: stop
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Stop
   cmd: docker container stop ${id}
   refresh: self
@@ -200,7 +200,7 @@
 #
 - type: pause
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Pause
   cmd: docker container pause ${id}
   refresh: self
@@ -213,7 +213,7 @@
 #
 - type: unpause
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Unpause
   cmd: docker container unpause ${id}
   refresh: self
@@ -226,7 +226,7 @@
 #
 - type: restart
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Restart
   cmd: docker container restart ${id}
   when:
@@ -239,7 +239,7 @@
 #
 - type: delete
   item-types:
-    - browser-target
+    - browser-target-xx
   name: Delete
   cmd: docker container remove ${id}
   refresh: parent

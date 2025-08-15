@@ -2,12 +2,40 @@
     - browser-target
   definition:
     type: section
-    title: Container
+    title: Target
     subitems:
       - type: row
         subitems:
           - type: field
-            icon: icon-state-${state}.svg
+            icon: icon-state-started.svg
             color: black
-            label: 'State:'
-            value: '${state}'
+            label: 'Type:'
+            value: '${type}'
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'URL:'
+            value: '${url}'
+
+- item-types:
+    - browser-process
+  definition:
+    type: section
+    title: Process
+    subitems:
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'Type:'
+            value: '${type}'
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'URL:'
+            value: '${url}'

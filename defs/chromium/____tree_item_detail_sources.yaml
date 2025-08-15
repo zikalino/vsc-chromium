@@ -1,11 +1,21 @@
-- item-types:
-    - browser-process
-  cmd: docker image inspect ${id} --format json
-  refresh: self
+#- item-types:
+#    - browser-process
+#  endpoint: ${endpoint}
+#  query:
+#    id: 3
+#    method: SystemInfo.getProcessInfo
+#    params:
+#      targetId: ${id}
+#  refresh: self
 
 - item-types:
     - browser-target
-  cmd: docker container inspect ${id} --format json
+  endpoint: ${endpoint}
+  query:
+    id: 3
+    method: SystemInfo.getProcessInfo
+    params:
+      targetId: ${id}
   refresh: self
 
 - item-types:
