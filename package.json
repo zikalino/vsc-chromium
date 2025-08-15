@@ -1,10 +1,10 @@
 {
-  "name": "vsc-docker",
-  "displayName": "Docker Runner",
-  "description": "SmarterCode Docker Tools",
-  "version": "0.50.1",
-  "repository": "https://github.com/zikalino/vsc-docker",
-  "publisher": "Zim",
+  "name": "vsc-chromium",
+  "displayName": "Chromium Tools",
+  "description": "SmarterCode Chromium Tools",
+  "version": "0.0.1",
+  "repository": "https://github.com/zikalino/vsc-chromium",
+  "publisher": "Zim Kalinowski",
   "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.85.0"
@@ -13,9 +13,9 @@
     "Other"
   ],
   "keywords": [
-    "docker",
-    "azure",
-    "cli"
+    "chrome",
+    "chromium",
+    "opera"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -23,15 +23,7 @@
     "commands": [
       {
         "command": "vscode-docker-runner.displayExplorer",
-        "title": "Docker Runner: Explorer"
-      },
-      {
-        "command": "vscode-docker-runner.displayDiscoverImages",
-        "title": "Docker Runner: Discover Images"
-      },
-      {
-        "command": "vscode-docker-runner.displayCreateContainers",
-        "title": "Docker Runner: Create Containers"
+        "title": "Chromium Explorer: Show"
       }
     ]
   },
