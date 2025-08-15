@@ -10,8 +10,8 @@
   path-id: $.result.processInfo[::].id
   path-name: $.result.processInfo[::].type
   path-raw: $.result.processInfo[::]
-  item-type-generic: docker-image
-  item-type: docker-image
+  item-type-generic: browser-process
+  item-type: browser-process
 
 - item-types: browser-target-list
   endpoint: ${endpoint}
@@ -29,5 +29,5 @@
   path-id: $.result.targetInfos[::].targetId
   path-name: $.result.targetInfos[::].title
   path-raw: $.result.targetInfos[::]
-  item-type: docker-container
-  item-type-generic: docker-container
+  item-type: browser-target
+  item-type-generic: browser-target

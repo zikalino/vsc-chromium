@@ -1,5 +1,5 @@
 - item-types:
-    - docker-container
+    - browser-target
   fields:
     namex:
       path: $.[0].Name
@@ -9,7 +9,7 @@
         "running": started
         "exited": stopped
 - item-types:
-    - docker-image
+    - browser-process
   fields:
     repo_tag:
       path: $.[0].RepoTags[0]

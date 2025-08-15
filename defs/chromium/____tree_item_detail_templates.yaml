@@ -1,5 +1,5 @@
 - item-types:
-    - docker-container
+    - browser-target
   definition:
     type: section
     title: Container

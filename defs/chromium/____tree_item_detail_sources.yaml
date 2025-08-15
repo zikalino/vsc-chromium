@@ -1,10 +1,10 @@
 - item-types:
-    - docker-image
+    - browser-process
   cmd: docker image inspect ${id} --format json
   refresh: self
 
 - item-types:
-    - docker-container
+    - browser-target
   cmd: docker container inspect ${id} --format json
   refresh: self
 
