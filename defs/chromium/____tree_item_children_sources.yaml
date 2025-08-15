@@ -14,10 +14,20 @@
   item-type: docker-image
 
 - item-types: browser-target-list
-  cmd: docker ps --all --format json
+  endpoint: ${endpoint}
+  query:
+    id: 2
+    method: Target.getTargets
+    params:
+      filter:
+        - exclude: false
+          type: browser
+        - exclude: true
+          type: page
+        - exclude: false
   parser: rows-json
-  path-id: $[::].ID
-  path-name: $[::].Names
-  path-raw: $[::]
+  path-id: $.result.targetInfos[::].targetId
+  path-name: $.result.targetInfos[::].title
+  path-raw: $.result.targetInfos[::]
   item-type: docker-container
   item-type-generic: docker-container
