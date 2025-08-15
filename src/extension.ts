@@ -10,29 +10,11 @@ export function activate (context: ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     'vscode-docker-runner.displayExplorer',
     () => {
-      displayDockerExplorer(context);
+      displayChromiumExplorer(context);
     }
   );
 
   context.subscriptions.push(disposable);
-
-  disposable = vscode.commands.registerCommand(
-    'vscode-docker-runner.displayDiscoverImages',
-    () => {
-      displayDiscoverImages(context);
-    }
-  );
-
-  context.subscriptions.push(disposable);  
-
-  disposable = vscode.commands.registerCommand(
-    'vscode-docker-runner.displayCreateContainers',
-    () => {
-      displayCreateContainers(context);
-    }
-  );
-
-  context.subscriptions.push(disposable);  
 }
 
 // This method is called when your extension is deactivated
@@ -40,7 +22,7 @@ export function deactivate () {}
 
 var view: helpers.GenericWebView|null = null;
 
-function displayDockerExplorer(extensionContext : vscode.ExtensionContext) {
+function displayChromiumExplorer(extensionContext : vscode.ExtensionContext) {
 
   // set helpers global context so we don't have to do it again
   helpers.SetContext(vscode, extensionContext);
@@ -51,5 +33,5 @@ function displayDockerExplorer(extensionContext : vscode.ExtensionContext) {
     return;
   }
 
-  view = helpers.CreateExplorerView("Docker Runner", "Docker Runner", "media/icon.png");
+  view = helpers.CreateExplorerView("Chromium Explorer", "Chromium Explorer", "media/icon.png");
 }
