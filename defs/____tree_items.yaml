@@ -1,9 +1,9 @@
 - name: Welcome
-  description: Welcome to Docker Runner!
+  description: Welcome to Chromium Explorer!
   id: welcome
   icon: icon.png
   details: welcome_details.yaml
   type: generic
 
 # add definitions for respective sections / resouce providers here
-- $include: docker/____tree_docker.yaml
+- $include: chromium/____tree_chromium.yaml

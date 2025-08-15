@@ -53,25 +53,3 @@ function displayDockerExplorer(extensionContext : vscode.ExtensionContext) {
 
   view = helpers.CreateExplorerView("Docker Runner", "Docker Runner", "media/icon.png");
 }
-
-function displayDiscoverImages(extensionContext : vscode.ExtensionContext) {
-
-  // set helpers global context so we don't have to do it again
-  helpers.SetContext(vscode, extensionContext);
-
-  helpers.CreateFormView("docker/docker_image_import.yaml",
-                                view,
-                                "docker-image-list",
-                                null);
-}
-
-function displayCreateContainers(extensionContext : vscode.ExtensionContext) {
-
-  // set helpers global context so we don't have to do it again
-  helpers.SetContext(vscode, extensionContext);
-
-  helpers.CreateFormView("docker/docker_run.yaml",
-                                view,
-                                "docker-container-list",
-                                null);
-}
