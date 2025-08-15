@@ -2,11 +2,14 @@
 # Docker
 #
 - item-types: browser-process-list
-  cmd: docker image list --format json
+  endpoint: ${endpoint}
+  query: 
+    id: 1
+    method: SystemInfo.getProcessInfo
   parser: rows-json
-  path-id: $[::].ID
-  path-name: $[::].Repository
-  path-raw: $[::]
+  path-id: $.result.processInfo[::].id
+  path-name: $.result.processInfo[::].type
+  path-raw: $.result.processInfo[::]
   item-type-generic: docker-image
   item-type: docker-image
 

@@ -39,4 +39,5 @@ async function displayChromiumExplorer(extensionContext : vscode.ExtensionContex
   }
 
   view = helpers.CreateExplorerView("Chromium Explorer", "Chromium Explorer", "media/icon.png");
+  view.setVariable("endpoint", endpoint);
 }

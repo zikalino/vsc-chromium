@@ -11,7 +11,7 @@ form:
     subitems:
     - type: row
       subitems:
-        - $include: docker/__docker_container_selector_field.yaml
+        - $include: chromium/__docker_container_selector_field.yaml
     - type: row
       narrow: true
       subitems:

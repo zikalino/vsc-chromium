@@ -6,7 +6,7 @@
     - browser-process-list
   name: Search for Images
   template:
-    name: docker/docker_image_search.yaml
+    name: chromium/docker_image_search.yaml
   refresh: browser-process-list
 
 #
@@ -18,7 +18,7 @@
   name: Load image from tar file
   behavior: interactive
   template:
-    name: docker/docker_image_load.yaml
+    name: chromium/docker_image_load.yaml
   refresh: self
 
 #
@@ -30,7 +30,7 @@
   name: Import image from tar file
   behavior: interactive
   template:
-    name: docker/docker_image_import.yaml
+    name: chromium/docker_image_import.yaml
   refresh: self
 
 #
@@ -57,7 +57,7 @@
   behavior: interactive-no-wait
   # we specify template as well, so the user will have 2 options
   template:
-    name: docker/docker_run.yaml
+    name: chromium/docker_run.yaml
     parameters:
       image_id: ${id}
   # this is the id of the container list
@@ -139,7 +139,7 @@
   name: Execute Command in Container
   # cmd: abc
   template:
-    name: docker/docker_exec.yaml
+    name: chromium/docker_exec.yaml
     parameters:
       container_id: ${id}
   refresh: none
@@ -153,7 +153,7 @@
   name: Create a new image from a container's changes
   cmd: docker commit ${id}
   template:
-    name: docker/docker_commit.yaml
+    name: chromium/docker_commit.yaml
     parameters:
       container_id: ${id}
   refresh: none

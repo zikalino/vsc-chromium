@@ -11,7 +11,7 @@ form:
     subitems:
     - type: row
       subitems:
-        - $include: docker/__docker_image_selector_field.yaml
+        - $include: chromium/__docker_image_selector_field.yaml
 
   - type: section
     subitems:
