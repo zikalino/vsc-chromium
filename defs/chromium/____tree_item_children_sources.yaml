@@ -1,7 +1,7 @@
 #
 # Docker
 #
-- item-types: docker-image-list
+- item-types: browser-process-list
   cmd: docker image list --format json
   parser: rows-json
   path-id: $[::].ID
@@ -10,7 +10,7 @@
   item-type-generic: docker-image
   item-type: docker-image
 
-- item-types: docker-container-list
+- item-types: browser-target-list
   cmd: docker ps --all --format json
   parser: rows-json
   path-id: $[::].ID

@@ -3,18 +3,18 @@
 #
 - type: create
   item-types:
-    - docker-image-list
+    - browser-process-list
   name: Search for Images
   template:
     name: docker/docker_image_search.yaml
-  refresh: docker-image-list
+  refresh: browser-process-list
 
 #
 # load image
 #
 - type: load
   item-types:
-    - docker-image-list
+    - browser-process-list
   name: Load image from tar file
   behavior: interactive
   template:
@@ -26,7 +26,7 @@
 #
 - type: load
   item-types:
-    - docker-image-list
+    - browser-process-list
   name: Import image from tar file
   behavior: interactive
   template:
@@ -38,7 +38,7 @@
 #
 - type: delete
   item-types:
-    - docker-image-list
+    - browser-process-list
   name: Prune dangling images
   cmd: docker image prune
   behavior: interactive
@@ -61,7 +61,7 @@
     parameters:
       image_id: ${id}
   # this is the id of the container list
-  refresh: docker-container-list
+  refresh: browser-target-list
 
 #
 # pull image
@@ -111,7 +111,7 @@
 #
 - type: delete
   item-types:
-    - docker-container-list
+    - browser-target-list
   name: Prune stopped containers
   cmd: docker container prune
   behavior: interactive

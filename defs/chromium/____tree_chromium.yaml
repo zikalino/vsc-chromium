@@ -5,15 +5,15 @@
   subitems:
 
     - name: Processes
-      type: docker-image-list
-      id: docker-image-list
+      type: browser-process-list
+      id: browser-process-list
       icon: docker.png
       subitems: []
       raw: {}
 
     - name: Targets
-      type: docker-container-list
-      id: docker-container-list
+      type: browser-target-list
+      id: browser-target-list
       icon: docker.svg
       subitems: []
       raw: {}
