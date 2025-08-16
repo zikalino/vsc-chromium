@@ -1,3 +1,16 @@
+- item-types:
+    - browser
+  endpoint: ${endpoint}
+  query:
+    id: 3
+    method: Browser.getVersion
+  refresh: self
+
+- item-types:
+    - docker
+  cmd: docker info --format json
+  refresh: self
+
 #- item-types:
 #    - browser-process
 #  endpoint: ${endpoint}

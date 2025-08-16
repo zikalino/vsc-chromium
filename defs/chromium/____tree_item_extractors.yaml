@@ -1,4 +1,24 @@
 - item-types:
+    - browser
+  fields:
+    protocolVersion:
+      path: "$.result.protocolVersion"
+    jsVersion:
+      path: "$.result.jsVersion"
+    product:
+      path: "$.result.product"
+    revision:
+      path: "$.result.revision"
+    userAgent:
+      path: "$.result.userAgent"
+
+- item-types:
+    - browser-process
+  fields:
+    repo_tag:
+      path: $.[0].RepoTags[0]
+
+- item-types:
     - browser-target
   fields:
     type:

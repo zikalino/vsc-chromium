@@ -1,4 +1,49 @@
 - item-types:
+    - browser
+  definition:
+    type: section
+    title: Browser Information
+    subitems:
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'Product:'
+            value: '${product}'
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'Revision:'
+            value: '${revision}'
+
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'Protocol Version:'
+            value: '${protocolVersion}'
+
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'User Agent:'
+            value: '${userAgent}'
+
+      - type: row
+        subitems:
+          - type: field
+            icon: icon-state-started.svg
+            color: black
+            label: 'JS Version:'
+            value: '${jsVersion}'
+
+- item-types:
     - browser-target
   definition:
     type: section
