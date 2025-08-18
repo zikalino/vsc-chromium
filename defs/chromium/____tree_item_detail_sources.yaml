@@ -26,7 +26,7 @@
   endpoint: ${endpoint}
   query:
     id: 3
-    method: SystemInfo.getProcessInfo
+    method: Target.getTargetInfo
     params:
       targetId: ${id}
   refresh: self
